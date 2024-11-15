@@ -1,17 +1,19 @@
- <!--------------------------text-slider------------------------>
+ <!-----------------------text-slider--------------------->
 
- <section class="p-12">
-   <div class="grid grid-cols-4 p-4 gap-4">
-     <div class="m-4">
-       <h2> {{block.heading}}</h2>
-       <p> {{block.paragraph}}</p>
-       <button class="border"> {{block.button-text}}</button>
+ <section class="p-12 bg-white">
+   <div class="flex overflow-x-auto relative gap-4">
+     <div class="m-4 sticky left-0 shrink-0 basis-1/3">
+        <div class="bg-white p-4">
+          <h2> {{block.heading}}</h2>
+          <p> {{block.paragraph}}</p>
+          <button class="border"> {{block.button-text}}</button>
+      </div>
      </div>
 
     
   {% for item in block.rooms %}
-    <div>
-      <div class="aspect-[1/2] bg-cover bg-center mb-4" style="background-image:url('{{item.image}}');"> </div>
+    <div class="shrink-0 basis-1/3">
+      <div class="aspect-[2/3] bg-cover bg-center mb-4" style="background-image:url('{{item.image}}');"> </div>
       <h3> {{item.heading}}</h3>
     </div>
   {% endfor %}
