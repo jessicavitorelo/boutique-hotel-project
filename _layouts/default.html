@@ -15,23 +15,26 @@
 <body>
 
   <!-------------------------- header with nav and banner------------------>
-  <header class=" flex flex-col min-h-[75vh] md:min-h-screen p-0  {% if page.banner.fullwidth == true %} bg-center bg-cover {% else %} bg-no-repeat bg-[length:65%_auto] {% endif %}" style="background-image: url('{{page.banner.background-image}}') ; {% if page.banner.fullwidth !=  true %} background-position: {{page.banner.background-position}} ; {% endif %}">
-    <nav class="flex justify-between items-center px-5p"> 
+  <header class=" flex flex-col text-cream p-[5%] min-h-[75vh] relative md:min-h-screen pt-0 *:{% if page.banner.fullwidth == true %} bg-center bg-cover {% else %} bg-no-repeat bg-[length:65%_auto] {% endif %}" style="background-image: url('{{page.banner.background-image}}') ; {% if page.banner.fullwidth !=  true %} background-position: {{page.banner.background-position}} ; {% endif %}">
+    <div class=" bg-black opacity-40 absolute min-h-full w-full inset-0">
+
+    </div>
+    <nav class=" relative flex justify-between items-center px-5p"> 
       <div class="text-center">
-         <a class="inline-block text-2xl p-4 logo" href="/">Lago Boutique Hotel</a>
+         <a class="inline-block text-2xl p-4 logo font-serif" href="/">Lago Boutique Hotel</a>
       </div>
       
-      <div class="hidden md:flex p-4 poppins-bold">
+      <div class="hidden md:flex p-4 font-sans text-sm">
          <a href="/about.html" class="p-4 uppercase">About Us</a>
-         <a href="/book.html" class="p-4 uppercase">Book Now</a>
+         <a href="/book.html" class="p-4 uppercase">Accommodation</a>
          <a href="/contact.html" class="p-4 uppercase">Contact</a>
+         <a href="/book.html" class=" p-4 uppercase emphasis-button border border-white"> Book Now </a>
       </div>
     </nav>
 
-    <div class="px-5p my-auto">
-      <hr class="w-56 -ml-5p mb-4">
-      <h1 class="m-0 uppercase text-7xl"> {{page.banner.heading}}</h1>
-      <h2 class="text-lg"> {{page.banner.subheading}}</h2>
+    <div class="px-5p my-auto relative">
+      <h1 class="m-0 uppercase text-7xl font-display"> {{page.banner.heading}}</h1>
+      <h2 class="text-lg font-serif"> {{page.banner.subheading}}</h2>
     </div>
 
 </header>
@@ -42,6 +45,45 @@
   {% endfor %}
 
     {{content}}
+
+<!--------------------------Footer------------------------>
+<section class="bg-cream text-blue-950 font-sans py-12">
+    <div class="text-center">
+        <a class="inline-block text-center text-2xl p-4 logo  .font-serif mb-4" href="/">Lago Boutique Hotel</a>
+     </div>
+    <div class="grid grid-cols-3 text-center border-t border-b border-blue-950/50 divide-x divide-blue-950/50 p-0">
+    
+      <div class="p-4">
+        <h4 class="mb-2 font-bold">Location</h4>
+        <div class="text-sm">
+            <a href="#"> Via Bella 346</br> 
+            Lago di Como, </br>
+            16389 Italia </a>
+        </div>
+
+      </div>
+    
+      <div class="p-4">
+        <h4 class="mb-2 font-bold">Contact</h4>
+        <div class="text-sm">
+            <div><a href="#"> Call us </a></div>
+            <div><a href="#"> Email us </a></div>
+            <div> <a href="#"> Chat with us </a></div>
+        </div>
+      </div>
+    
+      <div class="p-4">
+        <h4 class="mb-2 font-bold">Follow us</h4>
+        <div class="text-sm">
+            <div><a href="#"> Instagram </a></div> 
+            <div><a href="#"> Facebook </a></div> 
+            <div><a href="#"> YouTube </a></div>
+        </div> 
+      </div>
+    
+    </div>
+    
+    </section>
 </body>
 
 </html>
