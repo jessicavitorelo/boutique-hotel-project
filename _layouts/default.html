@@ -5,11 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <title>{{page.title}}</title>
 </head>
 
 <body>
+
+  <!-------------------------- header with nav and banner------------------>
+  <header class=" flex flex-col min-h-[75vh] md:min-h-screen p-0  {% if page.banner.fullwidth == true %} bg-center bg-cover {% else %} bg-no-repeat bg-[length:65%_auto] {% endif %}" style="background-image: url('{{page.banner.background-image}}') ; {% if page.banner.fullwidth !=  true %} background-position: {{page.banner.background-position}} ; {% endif %}">
+    <nav class="flex justify-between items-center px-5p"> 
+      <div class="text-center">
+         <a class="inline-block text-2xl p-4 logo" href="/">Lago Boutique Hotel</a>
+      </div>
+      
+      <div class="hidden md:flex p-4 poppins-bold">
+         <a href="/about.html" class="p-4 uppercase">About Us</a>
+         <a href="/book.html" class="p-4 uppercase">Book Now</a>
+         <a href="/contact.html" class="p-4 uppercase">Contact</a>
+      </div>
+    </nav>
+
+    <div class="px-5p my-auto">
+      <hr class="w-56 -ml-5p mb-4">
+      <h1 class="m-0 uppercase text-7xl"> {{page.banner.heading}}</h1>
+      <h2 class="text-lg"> {{page.banner.subheading}}</h2>
+    </div>
+
+</header>
+
+  {% for block in page.blocks %}
+  <!--{{block.id}}-->
+  {% include /blocks/{{block.id}}.html %}
+  {% endfor %}
+
     {{content}}
 </body>
 
