@@ -458,6 +458,9 @@ p {
 .m-0 {
   margin: 0px;
 }
+.m-4 {
+  margin: 1rem;
+}
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -483,6 +486,9 @@ p {
 .hidden {
   display: none;
 }
+.aspect-\[1\/2\] {
+  aspect-ratio: 1/2;
+}
 .min-h-\[75vh\] {
   min-height: 75vh;
 }
@@ -495,6 +501,9 @@ p {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -503,6 +512,9 @@ p {
 }
 .justify-between {
   justify-content: space-between;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .divide-x > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 0;
@@ -559,6 +571,9 @@ p {
 }
 .p-\[5\%\] {
   padding: 5%;
+}
+.p-12 {
+  padding: 3rem;
 }
 .py-12 {
   padding-top: 3rem;

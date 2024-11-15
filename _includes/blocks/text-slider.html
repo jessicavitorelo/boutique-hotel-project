@@ -1,0 +1,20 @@
+ <!--------------------------text-slider------------------------>
+
+ <section class="p-12">
+   <div class="grid grid-cols-4 p-4 gap-4">
+     <div class="m-4">
+       <h2> {{block.heading}}</h2>
+       <p> {{block.paragraph}}</p>
+       <button class="border"> {{block.button-text}}</button>
+     </div>
+
+    
+  {% for item in block.rooms %}
+    <div>
+      <div class="aspect-[1/2] bg-cover bg-center mb-4" style="background-image:url('{{item.image}}');"> </div>
+      <h3> {{item.heading}}</h3>
+    </div>
+  {% endfor %}
+
+   </div>
+ </section>
