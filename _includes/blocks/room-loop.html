@@ -15,14 +15,14 @@
               <p>{{room.paragraph}}</p>
             
               <div class="flex overflow-x-auto relative gap-4">
-                <h3> </h3>
-                <h3> </h3>
-                <h3> </h3>
-                <h3> </h3>
+                <h3> {{room.nightly-price}}</h3>
+                <h3> {{room.adults}} adults</h3>
+                <h3> {{room.bed-type}}</h3>
+                <h3> {{room.breakfast}} </h3>
                 
               </div>
-
-              <button class=" button-dark border border-solid px-5">{{room.button-text}}</button>
+              <button class=" button-dark border border-solid px-5">{{room.button-text-1}}</button>
+              <button class=" button-dark border border-solid px-5">{{room.button-text-2}}</button>
           </div>
 
       </div>
@@ -30,11 +30,10 @@
   
  </section>
 
-  
  
   <section class="p-0"> 
     <div class="grid grid-cols-2 md:grid-cols-3">
-  {% for item in room.items %}
+  {% for item in room.gallery %}
       <div class="aspect-square bg-cover bg-center bg-cream border border-cream" style="background-image: url('{{item.image}}');"> </div>
   {% endfor %}
   
