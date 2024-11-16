@@ -1,0 +1,33 @@
+   <!---------------Contact Form------------------>
+
+   <section class="bg-white p-36">
+    
+    {% if block.heading %}
+    <h2> {{block.heading}}</h2>
+    {% endif %}
+
+    <div class=" grid grid-cols-2">
+      <div class="max-w-52 mr-auto">
+        <h2> Contact Us</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolore blanditiis illum fugiat quam quod! Quos neque laudantium dicta ratione, veniam sed aperiam minus iure a facere excepturi, omnis placeat?</p>
+      </div>
+
+      <form>
+        <label for="name" class="sr-only">name</label>
+        <input id="name" name="name" type="text" placeholder="name" class=" bg-inherit placeholder:text-inherit border-b block w-full my-4 outline-none">
+        
+        <label for="email" class="sr-only">email</label>
+        <input id="email" name="email" type="email" placeholder="email" class=" bg-inherit placeholder:text-inherit  border-b border-initial block w-full my-4 outline-none">   
+        
+        <label for="message" class="w-full">message</label>
+        <textarea class="w-full resize-none border block bg-inherit outline-none" rows="10" id="message">
+            </textarea>
+  
+        <div class="text-right my-4">
+                <input type="submit" value="send" class="border px-5">
+        </div>
+      </form>
+      </div>
+  
+    </div>
+  </section>
